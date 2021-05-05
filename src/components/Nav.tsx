@@ -21,13 +21,13 @@ box-shadow: 0 0 3px rgba(0,0,0,0.25);
       .icon{
     width: 24px;
     height:24px;
-       }
-       &.selected{
-       color:#da5b28;
-       .icon{
-       fill:#da5b28;
-       }
-       }
+      }
+        &.selected{
+        color:#da5b28;
+        .icon{
+        fill:#da5b28;
+         }
+      }
     } 
   }
 }
