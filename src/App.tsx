@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 import 'index.scss';
 import styled from 'styled-components';
+import Nav from './components/Nav';
 
 const Wrapper = styled.div`
 border:1px solid red;
@@ -19,18 +20,7 @@ const Main = styled.div`
 flex-grow:1;
 overflow: auto;
 `;
-const Nav = styled.div`
-line-height:24px;
-box-shadow: 0 0 3px rgba(0,0,0,0.25);
->ul{
-  display:flex;
-  >li{
-    width:33.3333%;
-    text-align:center;
-    padding:16px;
-  }
-}
-`;
+
 
 function App() {
   return (
@@ -53,21 +43,7 @@ function App() {
             </Route>
           </Switch>
         </Main>
-        <Nav>
-          <ul>
-            <li>
-              <Link to="/tags">标签页</Link>
-            </li>
-            <li>
-              <Link to="/money">记账页</Link>
-            </li>
-            <li>
-              <Link to="/statistics">统计页</Link>
-            </li>
-          </ul>
-        </Nav>
-
-
+        <Nav/>
       </Wrapper>
     </Router>
   );
