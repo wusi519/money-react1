@@ -6,11 +6,12 @@ font-size:24px;
   > ul{
     display:flex;
     background:#c4c4c4;
-    position: relative;
+    
     >li{
       width:50%;  
       text-align: center; 
       padding:16px 0; 
+      position: relative;
       &.selected::after{
       content:'';
       display:block;
@@ -18,9 +19,8 @@ font-size:24px;
       background:#333;
       position:absolute;
       bottom:0;
-      width:50%;
+      width:100%;
       left:0;
-     
          }
       }
     }
@@ -40,8 +40,8 @@ const CategorySection: React.FC<Props> = (props) => {
       <ul>
         {categoryList.map(c =>
           <li key={c}
-              className={category === '-' ? 'selected' : ''}
-              onClick={() => {props.onChange('-');}}
+              className={category === c ? 'selected' : ''}
+              onClick={() => {props.onChange(c);}}
           >{categoryMap[c]}
           </li>
         )}
