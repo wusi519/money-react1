@@ -27,14 +27,15 @@ font-size:24px;
 `;
 const CategorySection: React.FC = () => {
   const categoryMap = {'-': '支出', '+': '收入'};
-  type Keys =keyof typeof categoryMap
+  type Keys = keyof typeof categoryMap
   const [categoryList] = useState<Keys[]>(['-', '+']);
   const [category, setCategory] = useState('-');
   return (
     <Wrapper>
       <ul>
         {categoryList.map(c =>
-          <li className={category === '-' ? 'selected' : ''}
+          <li key={c}
+              className={category === '-' ? 'selected' : ''}
               onClick={() => {setCategory('-');}}
           >{categoryMap[c]}
           </li>
