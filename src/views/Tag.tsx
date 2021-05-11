@@ -24,7 +24,7 @@ const Topbar = styled.header`
 const InputWrapper=styled.div`
   background:white;
   padding:0 16px;
-  margin-top:8px;
+  margin-top:16px;
 `
 
 const Tag: React.FC = () => {
@@ -39,7 +39,7 @@ const Tag: React.FC = () => {
         <Icon name=""/>
       </Topbar>
       <InputWrapper>
-        <Input label="标签名" type="text" placeholder="标签名"/>
+        <Input label="标签名" type="text" placeholder="标签名" value={tag.name}/>
       </InputWrapper>
       <Center>
         <Gap/>
