@@ -1,17 +1,56 @@
 import Layout from '../components/Layout';
 import React from 'react';
 import {useTags} from '../useTags';
+import styled from 'styled-components';
+import Icon from '../components/Icon';
+
+const TagList = styled.ol`
+  font-size:16px;
+  background:white;
+  >li{
+    border-bottom:1px solid #e5e5e5;
+    line-height:20px;
+    padding:12px 16px 12px 0;
+    margin-left:16px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+  }
+`;
+const Button = styled.button`
+font-size:18px;border:none;padding:8px 12px;border-radius: 4px;background:#f60;
+color:#fff;
+`;
+const Center = styled.div`
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column;
+`;
+const Gap = styled.div`
+  height:16px;
+`;
 
 function Tags() {
- const {tags,setTags} = useTags();
+  const {tags, setTags} = useTags();
   return (
     <Layout>
-   <ol>
-     {tags.map(tag=>
-     <li key={tag}>{tag}</li>
-     )}
-   </ol>
+      <TagList>
+        {tags.map(tag =>
+          <li key={tag}>
+            <span className="oneLine">{tag}长很长很很长很长长</span>
+            <Icon name="right"/>
+          </li>
+        )}
+      </TagList>
+      <Center>
+        <Gap/>
+        <Gap/><Gap/>
+          <Button>新增标签</Button>
+        <Gap/>
+      </Center>
     </Layout>
-  )
+  );
 }
-export default Tags
+
+export default Tags;

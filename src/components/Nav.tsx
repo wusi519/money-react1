@@ -24,9 +24,9 @@ box-shadow: 0 0 3px rgba(0,0,0,0.25);
     height:24px;
       }
         &.selected{
-        color:#da5b28;
+        color:#f60;
         .icon{
-        fill:#da5b28;
+        fill:#f60;
          }
       }
     } 

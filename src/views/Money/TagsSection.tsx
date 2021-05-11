@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import React, {useState} from 'react';
+import React from 'react';
 import {useTags} from '../../useTags';
 
 
@@ -21,7 +21,7 @@ margin:0 -12px;
       font-size:14px;
       margin:8px 12px;
       &.selected{
-      background: #da5b28;
+      background: #f60;
       }
     }
   }
