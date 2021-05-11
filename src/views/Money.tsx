@@ -21,12 +21,11 @@ function Money() {
     amount: 0
   });
   const onChange = (obj: Partial<typeof selected>) => {
-    setSelected({ ...selected,...obj})
+    setSelected({...selected, ...obj});
   };
 
   return (
     <MyLayout>
-
       <TagsSection value={selected.tagIds}
                    onChange={(tagIds) => onChange({tagIds})}/>
       <NoteSection value={selected.note}
