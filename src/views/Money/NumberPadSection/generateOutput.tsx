@@ -20,7 +20,7 @@ const generateOutput = (text: string, output = '0') => {
         return output.slice(0, -1) || '';
       }
     case'清空':
-      return '';
+      return '0';
     case'.':
       if (output.indexOf('.') >= 0) {return;}
       return output + '.';
