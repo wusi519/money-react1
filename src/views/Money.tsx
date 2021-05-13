@@ -14,6 +14,7 @@ const MyLayout = styled(Layout)`
 
 type Category = '-' | '+'
 
+
 const defaultFormData = {
   tagIds: [] as number[],
   note: '',

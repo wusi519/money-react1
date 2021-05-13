@@ -22,7 +22,7 @@ const generateOutput = (text: string, output = '0') => {
     case'清空':
       return '0';
     case'.':
-      if (output.indexOf('.') >= 0) {return;}
+      if (output.indexOf('.') >= 0) {return output;}
       return output + '.';
     default:
       return '';
