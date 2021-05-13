@@ -58,7 +58,7 @@ function Statistics() {
           <Header>{date}</Header>
           <div>
             {records.map(r => {
-              return <Item key={Math.random()}>
+              return <Item>
                 <div className="tags oneLine">
                   {r.tagIds
                     .map(tagId => <span key={tagId}>{getName(tagId)}</span>)
